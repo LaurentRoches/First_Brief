@@ -1,0 +1,10 @@
+@media only screen and (min-width: 600px) {
+    .logo {
+        width: 15%;
+        height: 24px;
+    }
+    .boutonEntete {
+        width: 15%;
+        height: 32px;
+    }
+}
