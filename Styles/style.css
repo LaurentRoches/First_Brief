@@ -166,13 +166,21 @@ h2 {
     cursor: pointer;
     color: hsl(322, 100%, 66%);
 }
+.icon-reseau{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .iconeReseau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid white;
     border-radius: 9999px;
-}
-.tailleIconeReseau{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
-    color: white;
+    padding: 1px;
+    margin: 8px;
 }
