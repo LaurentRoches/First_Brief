@@ -1,10 +1,70 @@
 @media only screen and (min-width: 600px) {
     .logo {
         width: 15%;
-        height: 24px;
+        height: 32px;
     }
     .boutonEntete {
-        width: 15%;
-        height: 32px;
+        width: 13%;
+        height: 48px;
+        font-size: 18px;
+    }
+    .enteteDescri{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .blocGauche{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 35%;
+    }
+    .mainTitre{
+        font-size: 2em;
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+    .AlignementTexte{
+        text-align: left;
+    }
+    .firstBoutton{
+        width: 60%;
+        font-size: 18px;
+    }
+    .imageHeader{
+        order: 1;
+        align-self: flex-end;
+        width: 50%;
+    }
+    .TestP{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-top: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+    .Illustration{
+        width: 40%;
+    }
+    .responsiveBloc{
+        width: 45%;
+    }
+    .reverseRow{
+        flex-direction: row-reverse;
+    }
+    .BodyBox{
+        margin: 2% 5%;
+    }
+    .mainbox{
+        margin-top: 100px;
+    }
+    .truc-chiant{
+        width: 60%;
+
     }
 }
