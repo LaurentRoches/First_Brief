@@ -1,4 +1,7 @@
 @media only screen and (min-width: 600px) {
+    .retourTop{
+        width: 60px;
+    }
     .logo {
         width: 15%;
         height: 32px;

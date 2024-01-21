@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huddle</title>
-    <link rel="stylesheet" href="./Styles/reset.css">
-    <link rel="stylesheet" href="./Styles/style.css">
-    <link rel="stylesheet" href="./Styles/responsive.css">
-    <script src="https://kit.fontawesome.com/dec81e36c2.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./Medias/favicon_32_32.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Huddle</title>
+        <link rel="stylesheet" href="./Styles/reset.css">
+        <link rel="stylesheet" href="./Styles/style.css">
+        <link rel="stylesheet" href="./Styles/responsive.css">
+        <script src="https://kit.fontawesome.com/dec81e36c2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" preload>
+        <link rel="shortcut icon" href="./Medias/favicon_32_32.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <script src="./JS/javascript.js" defer></script>
 </head>
 <body>
     <header class="entete">
         <div class="navBar">
-            <img src="./Medias/logo.svg" alt="Le logo Huddle" class="logo"> 
+            <img id="ancreTop" src="./Medias/logo.svg" alt="Le logo Huddle" class="logo"> 
             <input type="button" value="Try It Free" class="boutonEntete Call-to-actions transiHover">
         </div>
         <div class="enteteDescri">
@@ -30,6 +31,11 @@
             <img src="./Medias/illustration_mockups.svg" alt="illustration d'une page web type" class="imageHeader">
         </div>
     </header>
+    <button id="retourTop" class="retourTop transiHover invisible">
+        <a href="#ancreTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </button>
     <div class="mainbox">
         <div class="BodyBox">
             <div class="TestP reverseRow">
@@ -83,14 +89,14 @@
         <a href="mailto:example@fylo.com">example@fylo.com</a>
     </p>
     <div class="footertext2">
-        <p class="text-foot1 hover-text"><a href="#">About Us</a></p>
-        <p class="text-foot1 hover-text"><a href="#">What We Do</a></p>
-        <p class="text-foot1 hover-text"><a href="#">FAQ</a></p>
+        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">About Us</span></a></p>
+        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">What We Do</span></a></p>
+        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">FAQ</span></a></p>
     </div>
     <div class="footertext3">
-        <p class="bottom-text"><a href="#">Career</a></p>
-        <p class="bottom-text"><a href="#">Blog</a></p>
-        <p class="bottom-text"><a href="#">Contact Us</a></p>
+        <p class="bottom-text "><a href="#"><span class="transiUnderline">Career</span></a></p>
+        <p class="bottom-text "><a href="#"><span class="transiUnderline">Blog</span></a></p>
+        <p class="bottom-text "><a href="#"><span class="transiUnderline">Contact Us</span></a></p>
     </div>
     <div class="icon-reseau">
         <!-- Facebook -->
@@ -106,8 +112,7 @@
         <i class="fa-brands fa-instagram "></i>
         </div>
     </div>
-    <p class="copyright">© Copyright 2018 Huddle. All rights reserved.</p>
+    <p class="copyright copyrightCenter">© Copyright 2018 Huddle. All rights reserved.</p>
     </footer>
 </body>
-<script src="./JS/javascript.js"></script>
 </html>
