@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,15 +16,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
         <script src="./JS/javascript.js" defer></script>
 </head>
-<body>
+<body class="lightMode bgColor">
     <header class="entete">
-        <div class="navBar">
-            <img id="ancreTop" src="./Medias/logo.svg" alt="Le logo Huddle" class="logo"> 
+        <div id="navBar" class="navBar">
+            <img id="ancreTop" src="./Medias/logo.svg" alt="Le logo Huddle" class="logo">
+                <div class="darkModeSwitch">
+                    <div class="iconeReseau tailleBoutonSwitch">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" class="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="iconeReseau tailleBoutonSwitch">
+                        <i class="fa-solid fa-moon "></i>
+                    </div>
+                </div>
+                <div>
+                    <!-- Mettre ici le traducteur -->
+                </div> 
             <input type="button" value="Try It Free" class="boutonEntete Call-to-actions transiHover">
         </div>
         <div class="enteteDescri">
             <div class="blocGauche">
-                <h2 class="Call-to-actions mainTitre">Build The Community Your Fans Will Love</h2>
+                <h1 class="mainTitre">Build The Community Your Fans Will Love</h1>
                 <p class="paragrapheEntete AlignementTexte">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
                 <input type="button" value="Get Started For Free" class="Call-to-actions firstBoutton transiHover">
             </div>    
@@ -64,55 +79,58 @@
                 </div>
             </div>
         </div>
-            <div class="truc-chiant">
-                <p class="Call-to-actions">Ready To Build Your Community?</p>
+            <div class="truc-chiant lightModeMilieu bgColorMilieu">
+                <h2 class="titreTruc-chiant">Ready To Build Your Community?</h2>
                 <input type="button" value="Get Started For Free" class="Call-to-actions secondButton transiHover">
             </div>
         </div>
     </div>
  <footer class="footer">
-      <!-- Contenu du pied de page... -->
-    <img src="Medias/logo.svg" alt="Logofooter" class="Logofooter" />
-    <p class="text-footer">
-        <span> <img src="Medias/icon_location.svg" alt="Localisation" /> </span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
-    </p>
-      <!-- Localisation -->
-    <p class="text-footer">
-        <span> <img src="Medias/icon_phone.svg" alt="Tel" /></span
-        ><a href="tel: +1-543-123-4567"> +1-543-123-4567</a>
-    </p>
-      <!-- Mail -->
-    <p class="footertext1">
-        <span><img src="Medias/icon_email.svg" alt="Mailicon" /></span>
-        <a href="mailto:example@fylo.com">example@fylo.com</a>
-    </p>
-    <div class="footertext2">
-        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">About Us</span></a></p>
-        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">What We Do</span></a></p>
-        <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">FAQ</span></a></p>
-    </div>
-    <div class="footertext3">
-        <p class="bottom-text "><a href="#"><span class="transiUnderline">Career</span></a></p>
-        <p class="bottom-text "><a href="#"><span class="transiUnderline">Blog</span></a></p>
-        <p class="bottom-text "><a href="#"><span class="transiUnderline">Contact Us</span></a></p>
-    </div>
-    <div class="icon-reseau">
-        <!-- Facebook -->
-        <div class="iconeReseau">
-        <i class="fa-brands fa-facebook-f "></i>
+    <img src="Medias/logo-blanc.svg" alt="Logo Huddle en blanc" class="Logofooter" />
+    <div class="responsiveFooter">
+        <div class="footerGauche">
+            <p class="text-footer">
+                <span class="margeDroiteLorem"> <img src="Medias/icon_location.svg" alt="Localisation" /> </span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua
+            </p>
+            <p class="text-footer">
+                <span class="margeDroite"> <img src="Medias/icon_phone.svg" alt="Tel" /></span
+                ><a href="tel: +1-543-123-4567"> +1-543-123-4567</a>
+            </p>
+            <p class="text-footer">
+                <span class="margeDroite"><img src="Medias/icon_email.svg" alt="Mailicon" /></span>
+                <a href="mailto:example@fylo.com">example@fylo.com</a>
+            </p>
         </div>
-        <!-- Twitter -->
-        <div class="iconeReseau">
-        <i class="fa-brands fa-twitter "></i>
-        </div>        
-        <!-- Instagram -->
-        <div class="iconeReseau">
-        <i class="fa-brands fa-instagram "></i>
+        <div class="footertext1 footerCentreGauche">
+            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">About Us</span></a></p>
+            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">What We Do</span></a></p>
+            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">FAQ</span></a></p>
         </div>
-    </div>
-    <p class="copyright copyrightCenter">© Copyright 2018 Huddle. All rights reserved.</p>
+        <div class="footertext2 footerCentreDroit">
+            <p class="bottom-text "><a href="#"><span class="transiUnderline">Career</span></a></p>
+            <p class="bottom-text "><a href="#"><span class="transiUnderline">Blog</span></a></p>
+            <p class="bottom-text "><a href="#"><span class="transiUnderline">Contact Us</span></a></p>
+        </div>
+        <div class="footerDroit">
+            <div class="icon-reseau">
+                <!-- Facebook -->
+                <div class="iconeReseau transiColor">
+                <i class="fa-brands fa-facebook-f "></i>
+                </div>
+                <!-- Twitter -->
+                <div class="iconeReseau transiColor">
+                <i class="fa-brands fa-twitter "></i>
+                </div>        
+                <!-- Instagram -->
+                <div class="iconeReseau transiColor">
+                <i class="fa-brands fa-instagram "></i>
+                </div>
+            </div>
+            <p class="copyright copyrightCenter">© Copyright 2018 Huddle. All rights reserved.</p>
+        </div>
+    </div>    
     </footer>
 </body>
 </html>
