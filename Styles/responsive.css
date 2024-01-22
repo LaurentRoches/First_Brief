@@ -1,10 +1,10 @@
 @media only screen and (min-width: 600px) {
     .retourTop{
-        width: 60px;
+        width: 50px;
     }
     .logo {
-        width: 15%;
-        height: 32px;
+        width: 25%;
+        height: 28px;
     }
     .tailleBoutonSwitch{
         width: 40px;
@@ -20,6 +20,22 @@
         width: 26px;
         left: 4px;
         bottom: 4px;
+    }
+    .Logofooter{
+        width: 243px;
+        height: 84px;
+        object-fit: cover;
+        margin-left: 35px;
+    }
+
+}
+@media only screen and (min-width: 1000px) {
+    .retourTop{
+        width: 60px;
+    }
+    .logo {
+        width: 15%;
+        height: 32px;
     }
     .boutonEntete {
         width: 13%;
@@ -135,9 +151,4 @@
         flex-direction: row;
         justify-content: flex-start;
     }
-
-}
-@media only screen and (min-width: 800px) {
-
-
 }
