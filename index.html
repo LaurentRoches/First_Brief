@@ -20,21 +20,49 @@
     <header class="entete">
         <div id="navBar" class="navBar">
             <img id="ancreTop" src="./Medias/logo.svg" alt="Le logo Huddle" class="logo">
-                <div class="darkModeSwitch">
-                    <div class="iconeReseau tailleBoutonSwitch">
-                        <i class="fa-regular fa-sun"></i>
+            <div>
+                <label for="menu-cb" class="menu-label">
+                    <svg viewBox="0 0 32 32" fill="#666" class="menuBurger">
+                        <rect x="0" y="4" rx="3" ry="3" width="32" height="3" />
+                        <rect x="0" y="14" rx="3" ry="3" width="32" height="3" />
+                        <rect x="0" y="24" rx="3" ry="3" width="32" height="3" />
+                    </svg>
+                </label>
+                <input type="checkbox" id="menu-cb" class="menu-cb">
+                <nav class="menu-nav">
+                    <div class="menu-item">
+                        <a href="#contact" class="colorBlack">Contact Us</a>
                     </div>
-                    <label class="switch">
-                        <input type="checkbox" class="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="iconeReseau tailleBoutonSwitch">
-                        <i class="fa-solid fa-moon "></i>
+                    <div class="menu-item">
+                        <div class="darkModeSwitch">
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <i class="fa-regular fa-sun"></i>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" class="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <i class="fa-solid fa-moon "></i>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <!-- Mettre ici le traducteur -->
-                </div> 
+                    <div class="menu-item">
+                        <div class="translateSwitch">
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <img src="./Medias/en_flag.png" alt="Drapeau anglais pour choisir la langue du site Huddle" class="iconeReseau tailleBoutonSwitch">
+                            </div>
+                            <label class="switchLangue">
+                                <input type="checkbox" class="checkboxLangue">
+                                <span class="sliderLangue round"></span>
+                            </label>
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <img src="./Medias/fr_flag.png" alt="Drapeau francais pour choisir la langue du site Huddle" class="iconeReseau tailleBoutonSwitch">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div> 
             <input type="button" value="Try It Free" class="boutonEntete Call-to-actions transiHover">
         </div>
         <div class="enteteDescri">
@@ -104,14 +132,14 @@
             </p>
         </div>
         <div class="footertext1 footerCentreGauche">
-            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">About Us</span></a></p>
-            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">What We Do</span></a></p>
-            <p class="text-foot1 hover-text "><a href="#"><span class="transiUnderline">FAQ</span></a></p>
+            <p class="text-foot1 hover-text "><a href=""><span class="transiUnderline">About Us</span></a></p>
+            <p class="text-foot1 hover-text "><a href=""><span class="transiUnderline">What We Do</span></a></p>
+            <p class="text-foot1 hover-text "><a href=""><span class="transiUnderline">FAQ</span></a></p>
         </div>
         <div class="footertext2 footerCentreDroit">
-            <p class="bottom-text "><a href="#"><span class="transiUnderline">Career</span></a></p>
-            <p class="bottom-text "><a href="#"><span class="transiUnderline">Blog</span></a></p>
-            <p class="bottom-text "><a href="#"><span class="transiUnderline">Contact Us</span></a></p>
+            <p class="bottom-text "><a href=""><span class="transiUnderline">Career</span></a></p>
+            <p class="bottom-text "><a href=""><span class="transiUnderline">Blog</span></a></p>
+            <p class="bottom-text "><a href=""><span id="contact" class="transiUnderline">Contact Us</span></a></p>
         </div>
         <div class="footerDroit">
             <div class="icon-reseau">

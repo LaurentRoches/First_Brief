@@ -4,6 +4,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+.colorBlack{
+    color: black;
+    font-size: 0.75em;
+}
 .lightMode,
 .lightModeMilieu{
     background-color: white;
@@ -11,29 +15,31 @@ body {
 }
 .darkMode,
 .darkModeMilieu{
-    background-color: black;
+    background-color: hsl(192, 100%, 9%);
     color: white;
 }
 
-/* CSS du bouton switch jour/nuit */
-.darkModeSwitch{
+/* CSS du bouton switch jour/nuit et du Translate*/
+.darkModeSwitch,
+.translateSwitch{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .tailleBoutonSwitch{
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     padding-top: 5px;
     object-fit: cover;
 }
 /* le switch - la box autour du slider */
-.switch {
+.switch,
+.switchLangue {
   position: relative;
   display: inline-block;
-  width: 12px;
-  height: 8px;
+  width: 60px;
+  height: 34px;
 }
 
 /* cacher par defaut */
@@ -42,9 +48,15 @@ body {
   width: 0;
   height: 0;
 }
+.switchLangue input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
 /* le slider */
-.slider {
+.slider,
+.sliderLangue {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -59,10 +71,21 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 7px;
-  width: 7px;
-  left: 1px;
-  bottom: 1px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.sliderLangue:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -71,12 +94,23 @@ body {
 input:checked + .slider {
   background-color: hsl(322, 100%, 66%);
 }
+input:checked + .sliderLangue {
+  background-color: hsl(322, 100%, 66%);
+}
 
 input:focus + .slider {
   box-shadow: 0 0 1px hsl(322, 100%, 66%);
 }
+input:focus + .sliderLangue {
+  box-shadow: 0 0 1px hsl(322, 100%, 66%);
+}
 
 input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+input:checked + .sliderLangue:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -86,12 +120,67 @@ input:checked + .slider:before {
 .slider.round {
   border-radius: 34px;
 }
+.sliderLangue.round {
+  border-radius: 34px;
+}
 
 .slider.round:before {
   border-radius: 50%;
 }
+.sliderLangue.round:before {
+  border-radius: 50%;
+}
 
 /* Fin du switch */
+
+/* Menu Burger */
+.menuBurger{
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+.menu-cb,
+.menu-label{
+    z-index: 2;
+    cursor: pointer;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+}
+.menu-nav{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(200%) translateY(0);
+    transition: transform 1s linear;
+}
+.menu-item{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.menu-cb:checked ~.menu-nav{
+    transform: translateX(-47%) translateY(50px);
+    z-index: 2;
+}
+/*aide à la fermeture du menu*/
+.menu-cote {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+/* Fin du menu Burger*/
 
 .retourTop{
     position: fixed;

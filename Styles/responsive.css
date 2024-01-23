@@ -2,6 +2,9 @@
     .retourTop{
         width: 50px;
     }
+    .colorBlack{
+        font-size: 1em;
+    }
     .logo {
         width: 25%;
         height: 28px;
@@ -32,6 +35,13 @@
 @media only screen and (min-width: 1000px) {
     .retourTop{
         width: 60px;
+    }
+    .menu-cb,
+    .menu-label{
+        display: none;
+    }
+    .menu-nav{
+        transform: translateX(8px) translateY(-9px);
     }
     .logo {
         width: 15%;
