@@ -41,7 +41,7 @@
         display: none;
     }
     .menu-nav{
-        transform: translateX(8px) translateY(-9px);
+        transform: translateX(-100px) translateY(-9px);
     }
     .logo {
         width: 15%;
@@ -160,5 +160,12 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+}
+
+
+@media only screen and (min-width: 1350px) {
+    .menu-nav{
+        transform: translateX(8px) translateY(-9px);
     }
 }
