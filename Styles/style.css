@@ -1,88 +1,91 @@
 body {
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 h1,
 h2,
 h3,
-h4 {
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+h4{
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
-.Call-to-actions {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+.Call-to-actions{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 /* couleur du bouton */
-.rosePale {
-  color: hsl(322, 100%, 66%);
+.rosePale{
+    color: hsl(322, 100%, 66%);
 }
 /* couleur du header */
-.bleuCiel {
-  color: hsl(193, 100%, 96%);
+.bleuCiel{
+    color: hsl(193, 100%, 96%);
 }
 /* couleur du footer */
-.blueFoncer {
-  color: hsl(192, 100%, 9%);
+.blueFoncer{
+    color: hsl(192, 100%, 9%);
 }
 /* Couleur des ombres des boxs */
-.grisOmbre {
-  color: hsl(208, 11%, 55%);
+.grisOmbre{
+    color: hsl(208, 11%, 55%);
 }
 
 header {
-  background-color: hsl(193, 100%, 96%);
-  background-image: url("../Medias/bg_hero_mobile.svg");
-  background-clip: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color:hsl(193, 100%, 96%);
+    background-image: url("../Medias/bg_hero_mobile.svg");
+    background-clip: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
 }
-.navBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  padding: 35px 5%;
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 35px 5%;
 }
-.logo {
-  width: 42%;
-  height: 24px;
+.logo{
+    width: 42%;
+    height: 24px;
 }
-.boutonEntete {
-  box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
-  background-color: white;
-  border-radius: 50px;
-  border-width: 0px;
-  width: 36%;
-  height: 32px;
+.boutonEntete{
+    box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+    background-color: white;
+    border-radius: 50px;
+    border-width: 0px;
+    width: 36%;
+    height: 32px;
 }
-.enteteDescri {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 90%;
-  padding: 15px 5%;
+.enteteDescri{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 15px 5%;
+
 }
-.firstBoutton {
-  background-color: hsl(322, 100%, 66%);
-  box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
-  color: white;
-  width: 70%;
-  height: 53px;
-  border-radius: 50px;
-  border-width: 0px;
-  margin-top: 33px;
-  margin-bottom: 63px;
+.firstBoutton{
+    background-color: hsl(322, 100%, 66%);
+    box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+    color: white;
+    width: 70%;
+    height: 53px;
+    border-radius: 50px;
+    border-width: 0px;
+    margin-top: 33px;
+    margin-bottom: 63px;
 }
-.imageHeader {
-  padding-top: 10px;
-  padding-bottom: 35px;
-  width: 90%;
+.imageHeader{
+    padding-top: 10px;
+    padding-bottom: 35px;
+    width: 90%; 
 }
 
 h2 {
@@ -104,71 +107,72 @@ h2 {
   /* padding: 4%; */
 }
 .mainbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
 .TestP {
   padding: 10%;
 }
-.truc-chiant {
-  background-color: white;
-  position: absolute;
-  bottom: -250px;
-  box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
-  border-radius: 15px;
-  width: 90%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 2;
+.truc-chiant{
+    background-color: white;
+    position: absolute;
+    bottom: -250px;
+    box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+    border-radius: 15px;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
 }
-.secondButton {
-  background-color: hsl(322, 100%, 66%);
-  box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
-  color: white;
-  width: 65%;
-  height: 50px;
-  border-radius: 50px;
-  border-width: 0px;
+.secondButton{
+    background-color: hsl(322, 100%, 66%);
+    box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+    color: white;
+    width: 65%;
+    height: 50px;
+    border-radius: 50px;
+    border-width: 0px;
+
 }
-.footer {
-  background-color: hsl(192, 100%, 9%);
-  color: white;
-  padding-top: 100px;
-  padding-left: 5%;
-  padding-bottom: 5%;
-  padding-right: 5%;
+.footer{
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
 }
 .transiHover,
 .transiUnderline,
-.transiColor {
-  transition: 0.5s;
+.transiColor{
+    transition: 0.5s;
 }
-.transiHover:hover {
-  opacity: 0.8;
-  cursor: pointer;
+.transiHover:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
-.transiUnderline:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.transiUnderline:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
-.transiColor:hover {
-  cursor: pointer;
-  color: hsl(322, 100%, 66%);
+.transiColor:hover{
+    cursor: pointer;
+    color: hsl(322, 100%, 66%);
 }
-.iconeReseau {
-  border: 1px solid white;
-  border-radius: 9999px;
+.iconeReseau{
+    border: 1px solid white;
+    border-radius: 9999px;
 }
-.tailleIconeReseau {
-  width: 25px;
-  height: 25px;
-  object-fit: cover;
-  color: white;
+.tailleIconeReseau{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    color: white;
 }
