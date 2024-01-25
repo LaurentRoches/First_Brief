@@ -1,190 +1,159 @@
-import WindowManager from "./WindowManager.js";
+// Faire apparaitre le bouton de retour au top
+let retourTop = document.getElementById ('retourTop');
 
-const t = THREE;
-let camera, scene, renderer, world;
-let near, far;
-let pixR = window.devicePixelRatio ? window.devicePixelRatio : 1;
-let cubes = [];
-let sceneOffsetTarget = { x: 0, y: 0 };
-let sceneOffset = { x: 0, y: 0 };
+window.addEventListener ("scroll", boutonRetour);
 
-let today = new Date();
-today.setHours(0);
-today.setMinutes(0);
-today.setSeconds(0);
-today.setMilliseconds(0);
-today = today.getTime();
-
-let internalTime = getTime();
-let windowManager;
-let initialized = false;
-
-// get time in seconds since beginning of the day (so that all windows use the same time)
-function getTime() {
-  return (new Date().getTime() - today) / 1000.0;
+function boutonRetour (){
+    if (window.scrollY > 500){
+        retourTop.classList.replace("invisible" , "visible");
+    } else {
+        retourTop.classList.replace("visible" , "invisible");
+    }
 }
 
-if (new URLSearchParams(window.location.search).get("clear")) {
-  localStorage.clear();
-} else {
-  // this code is essential to circumvent that some browsers preload the content of some pages before you actually hit the url
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState != "hidden" && !initialized) {
-      init();
-    }
-  });
 
-  window.onload = () => {
-    if (document.visibilityState != "hidden") {
-      init();
-    }
-  };
-
-  function init() {
-    initialized = true;
-
-    // add a short timeout because window.offsetX reports wrong values before a short period
-    setTimeout(() => {
-      setupScene();
-      setupWindowManager();
-      resize();
-      updateWindowShape(false);
-      render();
-      window.addEventListener("resize", resize);
-    }, 500);
+//Fermeture du menu burger
+let fermerMenu = () => {
+  let input = document.getElementById('menu-cb');
+  input.checked = false ;
+  let fenetreNode = document.getElementById('menu-cote');
+  fenetreNode.remove();
+}
+let changerEtatMenu = () => {
+  let input = document.getElementById('menu-cb');
+  let actif = input.checked;
+  if (actif){
+    let fenetreNode = document.createElement('div');
+    fenetreNode.id = 'menu-cote';
+    fenetreNode.className ='menu-cote';
+    fenetreNode.addEventListener('click', fermerMenu);
+    document.body.appendChild(fenetreNode);
+  } else {
+    let fenetreNode = document.getElementById('menu-cote');
+    fenetreNode.remove();
   }
+}
+let input = document.getElementById('menu-cb');
+input.addEventListener('click', changerEtatMenu);
 
-  function setupScene() {
-    camera = new t.OrthographicCamera(
-      0,
-      0,
-      window.innerWidth,
-      window.innerHeight,
-      -10000,
-      10000
-    );
 
-    camera.position.z = 2.5;
-    near = camera.position.z - 0.5;
-    far = camera.position.z + 0.5;
+//Switch entre Dark et light mode
+let checkboxValue = 'on';
+let checkbox = document.querySelector('.checkbox');
+let bgColor = document.querySelector('.bgColor');
+let bgColorMilieu = document.querySelector('.bgColorMilieu');
+checkbox.addEventListener('click', checkValue);
 
-    scene = new t.Scene();
-    scene.background = new t.Color(0.0);
-    scene.add(camera);
-
-    renderer = new t.WebGLRenderer({ antialias: true, depthBuffer: true });
-    renderer.setPixelRatio(pixR);
-
-    world = new t.Object3D();
-    scene.add(world);
-
-    renderer.domElement.setAttribute("id", "scene");
-    document.body.appendChild(renderer.domElement);
+function checkValue() {
+  if (checkboxValue === 'on') {
+    checkboxValue = 'off';
+    bgColor.classList.replace("lightMode", "darkMode");
+    bgColorMilieu.classList.replace("lightModeMilieu", "darkModeMilieu");
+  } else {
+    checkboxValue = 'on'
+    bgColor.classList.replace("darkMode", "lightMode");
+    bgColorMilieu.classList.replace("darkModeMilieu", "lightModeMilieu");
   }
+}
 
-  function setupWindowManager() {
-    windowManager = new WindowManager();
-    windowManager.setWinShapeChangeCallback(updateWindowShape);
-    windowManager.setWinChangeCallback(windowsUpdated);
 
-    // here you can add your custom metadata to each windows instance
-    let metaData = { foo: "bar" };
+// Traduction du site
 
-    // this will init the windowmanager and add this window to the centralised pool of windows
-    windowManager.init(metaData);
+let checkboxValueLangue = 'on';
+let checkboxLangue = document.querySelector('.checkboxLangue');
+let trad1 = document.getElementById('trad1');
+let tradContact1 = document.getElementById ('tradContact1');
+let tradContact2 = document.getElementById ('tradContact2');
+let trad2 = document.getElementById('trad2');
+let tradBouton1 = document.getElementById('tradBouton1');
+let tradBouton2 = document.getElementById('tradBouton2');
+let tradBouton3 = document.getElementById('tradBouton3');
+let trad3 = document.getElementById('trad3');
+let trad4 = document.getElementById('trad4');
+let trad5 = document.getElementById('trad5');
+let trad6 = document.getElementById('trad6');
+let trad7 = document.getElementById('trad7');
+let trad8 = document.getElementById('trad8');
+let trad9 = document.getElementById('trad9');
+let trad10 = document.getElementById('trad10');
+let trad11 = document.getElementById('trad11');
+let trad12 = document.getElementById('trad12');
+let trad13 = document.getElementById('trad13');
+let trad14 = document.getElementById('trad14');
+let trad15 = document.getElementById('trad15');
 
-    // call update windows initially (it will later be called by the win change callback)
-    windowsUpdated();
+
+checkboxLangue.addEventListener('click', checkTrad);
+
+function checkTrad() {
+  if (checkboxValueLangue === 'on') {
+    checkboxValueLangue = 'off';
+    trad1.innerHTML = `Créez une communauté que vos fans adoreront`;
+    tradContact1.innerHTML = `Nous contacter`;
+    tradContact2.innerHTML = `Nous contacter`;
+    trad2.innerHTML = `Huddle réimagine la façon dont nous construisons des communautés. Vous avez une voix, mais votre public aussi. Créez des liens avec vos utilisateurs en engageant une véritable discussion.`;
+    tradBouton1.removeAttribute("value");
+    tradBouton1.setAttribute("value", "Essai gratuit");
+    tradBouton2.removeAttribute("value");
+    tradBouton2.setAttribute("value", "Commencez gratuitement");
+    tradBouton3.removeAttribute("value");
+    tradBouton3.setAttribute("value", "Commencez gratuitement");
+    trad3.innerText=`Grandir ensemble`;
+    trad4.innerText=`Engagez des discussions fructueuses avec votre public et créez une communauté forte et loyale. Pensez aux conversations perspicaces que vous ratez avec un formulaire de retour d'information.`;
+    trad5.innerText=`Suivre les Conversations`;
+    trad6.innerText=`Vous ne pagineriez pas une conversation dans la vie réelle, alors pourquoi le faire en ligne ? Nos fils de discussion sont chargés en temps réelle pour un flux plus naturel.`;
+    trad7.innerText=`Vos utilisateurs`;
+    trad8.innerText=`L'intégration de Huddle à la solution d'authentification de votre application ne prend que peu de temps. Cela signifie qu'une fois connectés à votre application, vos utilisateurs peuvent commencer à chatter immédiatement.`;
+    trad9.innerText=`Prêt à construire votre communauté ?`;
+    trad10.innerHTML=`À propos de nous`;
+    trad11.innerHTML=`Ce que nous faisons`;
+    trad12.innerText=`FAQ`;
+    trad13.innerHTML=`Carrière`;
+    trad14.innerText=`Blog`;
+    trad15.innerHTML=`© Copyright 2018 Huddle. Tous droits réservés.`;
+  } else {
+    checkboxValueLangue = 'on';
+    trad1.innerHTML = `Build The Community Your Fans Will Love`;
+    tradContact1.innerHTML = `Contact us`;
+    tradContact2.innerHTML = `Contact us`;
+    trad2.innerHTML = `Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.`;
+    tradBouton1.removeAttribute("value");
+    tradBouton1.setAttribute("value", "Try It Free");
+    tradBouton2.removeAttribute("value");
+    tradBouton2.setAttribute("value", "Get Started For Free");
+    tradBouton3.removeAttribute("value");
+    tradBouton3.setAttribute("value", "Get Started For Free");
+    trad3.innerText=`Grow Together`;
+    trad4.innerText=`Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.`;
+    trad5.innerText=`Folowing conversations`;
+    trad6.innerText=`You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.`;
+    trad7.innerText=`Your Users`;
+    trad8.innerText=` It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.`;
+    trad9.innerText=`Ready To Build Your Community?`;
+    trad10.innerHTML=`About Us`;
+    trad11.innerHTML=`What We Do`;
+    trad12.innerText=`FAQ`;
+    trad13.innerHTML=`Career`;
+    trad14.innerText=`Blog`;
+    trad15.innerHTML=`© Copyright 2018 Huddle. All rights reserved.`;
   }
+}
 
-  function windowsUpdated() {
-    updateNumberOfCubes();
-  }
 
-  function updateNumberOfCubes() {
-    let wins = windowManager.getWindows();
+//Rendre la mouche mobile
 
-    // remove all cubes
-    cubes.forEach((c) => {
-      world.remove(c);
-    });
+let catchImpossible = document.getElementById('catchImpossible');
+catchImpossible.addEventListener('mouseover', dplct);
 
-    cubes = [];
-
-    // add new cubes based on the current window setup
-    for (let i = 0; i < wins.length; i++) {
-      let win = wins[i];
-
-      let c = new t.Color();
-      c.setHSL(i * 0.1, 1.0, 0.5);
-
-      let s = 100 + i * 50;
-      let cube = new t.Mesh(
-        new t.BoxGeometry(s, s, s),
-        new t.MeshBasicMaterial({ color: c, wireframe: true })
-      );
-      cube.position.x = win.shape.x + win.shape.w * 0.5;
-      cube.position.y = win.shape.y + win.shape.h * 0.5;
-
-      world.add(cube);
-      cubes.push(cube);
-    }
-  }
-
-  function updateWindowShape(easing = true) {
-    // storing the actual offset in a proxy that we update against in the render function
-    sceneOffsetTarget = { x: -window.screenX, y: -window.screenY };
-    if (!easing) sceneOffset = sceneOffsetTarget;
-  }
-
-  function render() {
-    let t = getTime();
-
-    windowManager.update();
-
-    // calculate the new position based on the delta between current offset and new offset times a falloff value (to create the nice smoothing effect)
-    let falloff = 0.05;
-    sceneOffset.x =
-      sceneOffset.x + (sceneOffsetTarget.x - sceneOffset.x) * falloff;
-    sceneOffset.y =
-      sceneOffset.y + (sceneOffsetTarget.y - sceneOffset.y) * falloff;
-
-    // set the world position to the offset
-    world.position.x = sceneOffset.x;
-    world.position.y = sceneOffset.y;
-
-    let wins = windowManager.getWindows();
-
-    // loop through all our cubes and update their positions based on current window positions
-    for (let i = 0; i < cubes.length; i++) {
-      let cube = cubes[i];
-      let win = wins[i];
-      let _t = t; // + i * .2;
-
-      let posTarget = {
-        x: win.shape.x + win.shape.w * 0.5,
-        y: win.shape.y + win.shape.h * 0.5,
-      };
-
-      cube.position.x =
-        cube.position.x + (posTarget.x - cube.position.x) * falloff;
-      cube.position.y =
-        cube.position.y + (posTarget.y - cube.position.y) * falloff;
-      cube.rotation.x = _t * 0.5;
-      cube.rotation.y = _t * 0.3;
-    }
-
-    renderer.render(scene, camera);
-    requestAnimationFrame(render);
-  }
-
-  // resize the renderer to fit the window size
-  function resize() {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-
-    camera = new t.OrthographicCamera(0, width, 0, height, -10000, 10000);
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
-  }
+function nombreAlea(min, max){
+  return (Math.random()*(max-min)+min)*(Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1);
+}
+function dplct(){
+  let random = nombreAlea(75, 126);
+  let random2 = nombreAlea(75, 126);
+  let random3 = nombreAlea(50, 181);
+  catchImpossible.style.transform = `translateX(${random}px) translateY(${random2}px) rotate(${random3}deg)`;
+  setTimeout(()=>{
+  catchImpossible.removeAttribute("style");
+  }, 10000);
 }
