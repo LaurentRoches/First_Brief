@@ -1,4 +1,48 @@
 @media only screen and (min-width: 600px) {
+    .retourTop{
+        width: 50px;
+    }
+    .colorBlack{
+        font-size: 1em;
+    }
+    .logo {
+        width: 25%;
+        height: 28px;
+    }
+    .tailleBoutonSwitch{
+        width: 40px;
+        height: 40px;
+        padding-top: 5px;
+    }
+    .switch{
+        width: 60px;
+        height: 34px;
+    }
+    .slider:before{
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+    }
+    .Logofooter{
+        width: 243px;
+        height: 84px;
+        object-fit: cover;
+        margin-left: 35px;
+    }
+
+}
+@media only screen and (min-width: 1000px) {
+    .retourTop{
+        width: 60px;
+    }
+    .menu-cb,
+    .menu-label{
+        display: none;
+    }
+    .menu-nav{
+        transform: translateX(-100px) translateY(-9px);
+    }
     .logo {
         width: 15%;
         height: 32px;
@@ -18,19 +62,18 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 35%;
+        width: 40%;
     }
     .mainTitre{
         font-size: 2em;
+        width: 80%;
         text-align: left;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
     }
     .AlignementTexte{
         text-align: left;
     }
     .firstBoutton{
-        width: 60%;
+        width: 56%;
         font-size: 18px;
     }
     .imageHeader{
@@ -62,9 +105,67 @@
     }
     .mainbox{
         margin-top: 100px;
+        margin-bottom: 250px;
     }
     .truc-chiant{
-        width: 60%;
+        width: 55.5%;
+        height: 200px;
+        bottom: -325px;
+        padding-bottom: 20px;
+    }
+    .titreTruc-chiant{
+        width: 72%;
+    }
+    .titreTruc-chiant{
+        font-size: 1.5em;
+    }
+    .secondButton{
+        width: 40%;
+        height: 60px;
+        font-size: 1em;
+    }
+    .Logofooter{
+        width: 162px;
+        height: 56px;
+        object-fit: cover;
+        margin-left: 35px;
+    }
+    .responsiveFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+        margin: 5px;
+    }
+    .footerGauche{
+        width: 30%;
+    }
+    .footerCentreGauche,
+    .footerCentreDroit{
+        width: 15%;
+    }
+    .footerDroit{
+        width: 20%;
+    }
+    .text-footer{
+        text-align: justify;
+        font-size: 0.8em;
+    }
+    .footerDroit{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .icon-reseau{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
 
+
+@media only screen and (min-width: 1350px) {
+    .menu-nav{
+        transform: translateX(8px) translateY(-9px);
     }
 }
