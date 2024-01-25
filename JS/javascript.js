@@ -143,26 +143,17 @@ function checkTrad() {
 //Rendre la mouche mobile
 
 let catchImpossible = document.getElementById('catchImpossible');
-let nombreMvt = 0;
-console.log(nombreMvt);
 catchImpossible.addEventListener('mouseover', dplct);
 
-function dplct (){
-  if (nombreMvt === 0){
-    nombreMvt = 1;
-    catchImpossible.classList.replace("catchPosi1","catchPosi2");
-    console.log(nombreMvt);
-  }else if(nombreMvt === 1){
-    nombreMvt = 2;
-    catchImpossible.classList.replace("catchPosi2","catchPosi3");
-    console.log(nombreMvt);
-  }else if(nombreMvt === 2){
-    nombreMvt = 3;
-    catchImpossible.classList.replace("catchPosi3","catchPosi4");
-    console.log(nombreMvt);
-  }else if(nombreMvt === 3){
-    nombreMvt = 0;
-    catchImpossible.classList.replace("catchPosi4","catchPosi1");
-    console.log(nombreMvt);
-  }
+function nombreAlea(min, max){
+  return (Math.random()*(max-min)+min)*(Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1);
+}
+function dplct(){
+  let random = nombreAlea(75, 126);
+  let random2 = nombreAlea(75, 126);
+  let random3 = nombreAlea(50, 181);
+  catchImpossible.style.transform = `translateX(${random}px) translateY(${random2}px) rotate(${random3}deg)`;
+  setTimeout(()=>{
+  catchImpossible.removeAttribute("style");
+  }, 10000);
 }

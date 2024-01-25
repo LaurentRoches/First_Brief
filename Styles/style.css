@@ -437,27 +437,16 @@ h2 {
 
 .catchImpossible{
     z-index: 4;
-    width: 75px;
-    height: 75px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
-    transition: transform 1s linear;
+    transition:  1s ease;
 }
 .imageImpossible{
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+    width: 100px;
+    height: 50px;
     object-fit: cover;
-}
-/*Ses mvnts*/
-.catchPosi1{
-    transform: translateX(0) translateY(0) rotate(0);
-}
-.catchPosi2{
-    transform: translateX(-75px) translateY(-75px) rotate(90deg);
-}
-.catchPosi3{
-    transform: translateX(0) translateY(-150px) rotate(180deg);
-}
-.catchPosi4{
-    transform: translateX(75px) translateY(-75px) rotate(270deg);
 }
