@@ -3,10 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-header {
-}
 .form-body {
   background-image: url(../Medias/bg_hero_mobile.svg);
+  background-color: hsl(193, 100%, 96%);
+  background-clip: border-box;
 }
 .logo {
   width: 42%;
