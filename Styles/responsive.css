@@ -30,7 +30,10 @@
         object-fit: cover;
         margin-left: 35px;
     }
-
+ .form-checkbox {
+    margin-bottom: 30px;
+    
+  }
 }
 @media only screen and (min-width: 1000px) {
     .retourTop{
