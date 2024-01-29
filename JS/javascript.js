@@ -146,6 +146,7 @@ function nombreAlea(min, max) {
     (Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1)
   );
 }
+
 function dplct() {
   let random = nombreAlea(75, 126);
   let random2 = nombreAlea(75, 126);

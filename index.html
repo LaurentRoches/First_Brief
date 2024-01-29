@@ -1,31 +1,22 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Huddle</title>
-    <link rel="stylesheet" href="./Styles/reset.css" />
-    <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" href="./Styles/responsive.css" />
-    <script
-      src="https://kit.fontawesome.com/dec81e36c2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" preload />
-    <link
-      rel="shortcut icon"
-      href="./Medias/favicon_32_32.png"
-      type="image/x-icon"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./JS/javascript.js" defer></script>
-  </head>
-  <body class="lightMode bgColor">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Huddle</title>
+        <link rel="stylesheet" href="./Styles/reset.css">
+        <link rel="stylesheet" href="./Styles/style.css">
+        <link rel="stylesheet" href="./Styles/responsive.css">
+        <script src="https://kit.fontawesome.com/dec81e36c2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" preload>
+        <link rel="shortcut icon" href="./Medias/favicon_32_32.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <script src="./JS/javascript.js" defer></script>
+    </head>
+    <body class="lightMode bgColor">
+    <iframe id="popupFormulaire" class="formsInvisible popupFormulaire" src="./html/Formulaire.html" frameborder="0"></iframe>
     <header class="entete">
       <div id="navBar" class="navBar">
         <img
@@ -60,8 +51,67 @@
                   <input type="checkbox" class="checkbox" />
                   <span class="slider round"></span>
                 </label>
-                <div class="iconeReseau tailleBoutonSwitch">
-                  <i class="fa-solid fa-moon"></i>
+                <input type="checkbox" id="menu-cb" class="menu-cb">
+                <nav class="menu-nav">
+                    <div class="menu-item">
+                        <button class="butonToFooter"> <a href="#contact" class="colorBlack"><span id="tradContact1">Contact Us</span></a></button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="darkModeSwitch">
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <i class="fa-regular fa-sun"></i>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" class="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <i class="fa-solid fa-moon "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="translateSwitch">
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <img src="./Medias/en_flag.png" alt="Drapeau anglais pour choisir la langue du site Huddle" class="iconeReseau tailleBoutonSwitch">
+                            </div>
+                            <label class="switchLangue">
+                                <input type="checkbox" class="checkboxLangue">
+                                <span class="sliderLangue round"></span>
+                            </label>
+                            <div class="iconeReseau tailleBoutonSwitch">
+                                <img src="./Medias/fr_flag.png" alt="Drapeau francais pour choisir la langue du site Huddle" class="iconeReseau tailleBoutonSwitch">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div> 
+            <input id="tradBouton1" type="button" value="Try It Free" class="boutonEntete Call-to-actions transiHover">
+        </div>
+        <div class="enteteDescri">
+            <div class="blocGauche">
+                <h1 id="trad1" class="mainTitre">Build The Community Your Fans Will Love</h1>
+                <p id="trad2" class="paragrapheEntete AlignementTexte">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
+                <input id="tradBouton2" type="button" value="Get Started For Free" class="Call-to-actions firstBoutton goToForms transiHover">
+            </div>
+            <img src="./Medias/illustration_mockups.svg" alt="illustration d'une page web type" class="imageHeader">
+        </div>
+        <div id="catchImpossible" class="catchImpossible">
+            <img src="./Medias/Fly.gif" alt="La mouche impossible a attraper de Huddle" class="imageImpossible">
+        </div>
+    </header>
+    <button id="retourTop" class="retourTop transiHover invisible">
+        <a href="#ancreTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </button>
+    <div class="mainbox">
+        <div class="BodyBox">
+            <div class="TestP reverseRow">
+                <img class="Illustration" src="Medias/illustration_grow_together.svg" alt="Grow Together"/>
+                <div class="responsiveBloc ">
+                    <h2 id="trad3" class="AlignementTexte">Grow Together</h2>
+                    <p id="trad4" class="boxtext AlignementTexte"> Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
                 </div>
               </div>
             </div>
@@ -248,132 +298,57 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="BodyBox">
-        <div class="TestP">
-          <img
-            class="Illustration"
-            src="Medias/illustration_flowing_conversation.svg"
-            alt="Folowing conversations"
-          />
-          <div class="responsiveBloc">
-            <h2 id="trad5" class="AlignementTexte">Folowing conversations</h2>
-            <p id="trad6" class="boxtext AlignementTexte">
-              You wouldn't paginate a conversation in real life, so why do it
-              online? Our threads have just-in-time loading for a more natural
-              flow.
-            </p>
-          </div>
+        <div class="truc-chiant lightModeMilieu bgColorMilieu">
+            <h2 id="trad9" class="titreTruc-chiant">Ready To Build Your Community?</h2>
+            <input id="tradBouton3" type="button" value="Get Started For Free" class="Call-to-actions goToForms2 secondButton transiHover">
         </div>
-      </div>
-      <div class="BodyBox">
-        <div class="TestP reverseRow">
-          <img
-            class="Illustration"
-            src="Medias/illustration_your_users.svg"
-            alt="Your Users"
-          />
-          <div class="responsiveBloc">
-            <h2 id="trad7" class="AlignementTexte">Your Users</h2>
-            <p id="trad8" class="boxtext AlignementTexte">
-              It takes no time at all to integrate Huddle with your app's
-              authentication solution. This means, once signed in to your app,
-              your users can start chatting immediately.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="truc-chiant lightModeMilieu bgColorMilieu">
-        <h2 id="trad9" class="titreTruc-chiant">
-          Ready To Build Your Community?
-        </h2>
-        <input
-          id="tradBouton3"
-          type="button"
-          value="Get Started For Free"
-          class="Call-to-actions secondButton transiHover"
-        />
-      </div>
     </div>
     <footer class="footer">
-      <img
-        src="Medias/logo-blanc.svg"
-        alt="Logo Huddle en blanc"
-        class="Logofooter"
-      />
-      <div class="responsiveFooter">
-        <div class="footerGauche">
-          <p class="text-footer">
-            <span class="margeDroiteLorem">
-              <img src="Medias/icon_location.svg" alt="Localisation" />
-            </span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <p class="text-footer">
-            <span class="margeDroite">
-              <img src="Medias/icon_phone.svg" alt="Tel" /></span
-            ><a href="tel: +1-543-123-4567"> +1-543-123-4567</a>
-          </p>
-          <p class="text-footer">
-            <span class="margeDroite"
-              ><img src="Medias/icon_email.svg" alt="Mailicon"
-            /></span>
-            <a href="mailto:example@fylo.com">example@fylo.com</a>
-          </p>
-        </div>
-        <div class="footertext1 footerCentreGauche">
-          <p class="text-foot1 hover-text">
-            <a href=""
-              ><span id="trad10" class="transiUnderline">About Us</span></a
-            >
-          </p>
-          <p class="text-foot1 hover-text">
-            <a href=""
-              ><span id="trad11" class="transiUnderline">What We Do</span></a
-            >
-          </p>
-          <p class="text-foot1 hover-text">
-            <a href=""><span id="trad12" class="transiUnderline">FAQ</span></a>
-          </p>
-        </div>
-        <div class="footertext2 footerCentreDroit">
-          <p class="bottom-text">
-            <a href=""
-              ><span id="trad13" class="transiUnderline">Career</span></a
-            >
-          </p>
-          <p class="bottom-text">
-            <a href=""><span id="trad14" class="transiUnderline">Blog</span></a>
-          </p>
-          <p id="contact" class="bottom-text">
-            <a href=""
-              ><span id="tradContact2" class="transiUnderline"
-                >Contact Us</span
-              ></a
-            >
-          </p>
-        </div>
-        <div class="footerDroit">
-          <div class="icon-reseau">
-            <!-- Facebook -->
-            <div class="iconeReseau transiColor">
-              <i class="fa-brands fa-facebook-f"></i>
+        <img src="Medias/logo-blanc.svg" alt="Logo Huddle en blanc" class="Logofooter" />
+        <div class="responsiveFooter">
+            <div class="footerGauche">
+                <p class="text-footer">
+                    <span class="margeDroiteLorem"> <img src="Medias/icon_location.svg" alt="Localisation" /> </span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <p class="text-footer">
+                    <span class="margeDroite"> <img src="Medias/icon_phone.svg" alt="Tel" /></span
+                    ><a href="tel: +1-543-123-4567"> +1-543-123-4567</a>
+                </p>
+                <p class="text-footer">
+                    <span class="margeDroite"><img src="Medias/icon_email.svg" alt="Mailicon" /></span>
+                    <a href="mailto:example@fylo.com">example@fylo.com</a>
+                </p>
             </div>
-            <!-- Twitter -->
-            <div class="iconeReseau transiColor">
-              <i class="fa-brands fa-twitter"></i>
+            <div class="footertext1 footerCentreGauche">
+                <p class="text-foot1 hover-text "><a href=""><span id="trad10" class="transiUnderline">About Us</span></a></p>
+                <p class="text-foot1 hover-text "><a href=""><span id="trad11" class="transiUnderline">What We Do</span></a></p>
+                <p class="text-foot1 hover-text "><a href=""><span id="trad12" class="transiUnderline">FAQ</span></a></p>
             </div>
-            <!-- Instagram -->
-            <div class="iconeReseau transiColor">
-              <i class="fa-brands fa-instagram"></i>
+            <div class="footertext2 footerCentreDroit">
+                <p class="bottom-text "><a href=""><span id="trad13" class="transiUnderline">Career</span></a></p>
+                <p class="bottom-text "><a href=""><span id="trad14" class="transiUnderline">Blog</span></a></p>
+                <p id="contact" class="bottom-text "><a href=""><span id="tradContact2" class="transiUnderline">Contact Us</span></a></p>
             </div>
-          </div>
-          <p id="trad15" class="copyright copyrightCenter">
-            © Copyright 2018 Huddle. All rights reserved.
-          </p>
+            <div class="footerDroit">
+                <div class="icon-reseau">
+                    <!-- Facebook -->
+                    <div class="iconeReseau transiColor">
+                    <i class="fa-brands fa-facebook-f "></i>
+                    </div>
+                    <!-- Twitter -->
+                    <div class="iconeReseau transiColor">
+                    <i class="fa-brands fa-twitter "></i>
+                    </div>        
+                    <!-- Instagram -->
+                    <div class="iconeReseau transiColor">
+                    <i class="fa-brands fa-instagram "></i>
+                    </div>
+                </div>
+                <p id="trad15" class="copyright copyrightCenter">© Copyright 2018 Huddle. All rights reserved.</p>
+            </div>
         </div>
-      </div>
     </footer>
   </body>
 </html>
