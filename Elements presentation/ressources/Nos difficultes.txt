@@ -1,0 +1,13 @@
+La box entre le main et le footer ++
+
+Le responsive ++
+
+le darkmode et son toggle ++
+
+le fromulaire en popup ++
+
+la trad + (juste très long)
+
+La mouche +++ mais une fois la synthaxe corrige +
+
+le menu burger ++

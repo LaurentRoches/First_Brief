@@ -94,8 +94,7 @@ function checkTrad() {
     trad2.innerHTML = `Huddle réimagine la façon dont nous construisons des communautés. Vous avez une voix, mais votre public aussi. Créez des liens avec vos utilisateurs en engageant une véritable discussion.`;
     tradBouton1.removeAttribute("value");
     tradBouton1.setAttribute("value", "Essai gratuit");
-    tradBouton2.removeAttribute("value");
-    tradBouton2.setAttribute("value", "Commencez gratuitement");
+    tradBouton2.innerText = "Commencez gratuitement";
     tradBouton3.removeAttribute("value");
     tradBouton3.setAttribute("value", "Commencez gratuitement");
     trad3.innerText=`Grandir ensemble`;
@@ -119,8 +118,7 @@ function checkTrad() {
     trad2.innerHTML = `Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.`;
     tradBouton1.removeAttribute("value");
     tradBouton1.setAttribute("value", "Try It Free");
-    tradBouton2.removeAttribute("value");
-    tradBouton2.setAttribute("value", "Get Started For Free");
+    tradBouton2.innerText = "Get Started For Free";
     tradBouton3.removeAttribute("value");
     tradBouton3.setAttribute("value", "Get Started For Free");
     trad3.innerText=`Grow Together`;
