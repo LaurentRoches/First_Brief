@@ -42,6 +42,7 @@
     }
     .menu-nav{
         transform: translateX(-100px) translateY(-9px);
+        left: 45%;
     }
     .logo {
         width: 15%;

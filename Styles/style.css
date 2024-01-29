@@ -154,13 +154,15 @@ input:checked + .sliderLangue:before {
     left: 50%;
 }
 .menu-nav{
+    visibility: hidden;
     position: absolute;
     top: 35px;
     left: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    transform: translateX(200%) translateY(0);
+    transform: translateX(-47%) translateY(50px);
+    z-index: 2;
     transition: transform 1s linear;
 }
 .menu-item{
@@ -169,8 +171,7 @@ input:checked + .sliderLangue:before {
     align-items: center;
 }
 .menu-cb:checked ~.menu-nav{
-    transform: translateX(-47%) translateY(50px);
-    z-index: 2;
+    visibility: visible;
 }
 /*aide à la fermeture du menu*/
 .menu-cote {
@@ -449,4 +450,21 @@ h2 {
     width: 100px;
     height: 50px;
     object-fit: cover;
+}
+.formsInvisible{
+    visibility: hidden;
+}
+.formsVisible{
+    visibility: visible;
+}
+.popupFormulaire{
+    width: 50%;
+    height: 75%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    z-index: 3;
+}
+.blur-effect:not(iframe) {
+    filter: blur(8px);
 }

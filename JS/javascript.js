@@ -149,11 +149,30 @@ function nombreAlea(min, max){
   return (Math.random()*(max-min)+min)*(Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1);
 }
 function dplct(){
-  let random = nombreAlea(75, 126);
-  let random2 = nombreAlea(75, 126);
+  let random = nombreAlea(75, 250);
+  let random2 = nombreAlea(75, 250);
   let random3 = nombreAlea(50, 181);
   catchImpossible.style.transform = `translateX(${random}px) translateY(${random2}px) rotate(${random3}deg)`;
   setTimeout(()=>{
   catchImpossible.removeAttribute("style");
-  }, 10000);
+  }, 120000);
+}
+
+
+// Ouvrir le formulaire
+let windowFeatures = "left=100,top=100,width=375,height=500";
+let goToForms = document.querySelector('.goToForms');
+goToForms.addEventListener('click', ouvrirFormulaire);
+let goToForms2 = document.querySelector('.goToForms2');
+goToForms2.addEventListener('click', ouvrirFormulaire);
+let popupFormulaire = document.getElementById('popupFormulaire');
+
+// function ouvrirFormulaire (){
+//   window.open(href="./html/Formulaire.html", "Formulaire", "windowFeatures");
+// }
+
+function ouvrirFormulaire (){
+  popupFormulaire.classList.replace("formsInvisible", "formsVisible");
+  document.body.classList.add("blur-effect:not(iframe)");
+
 }
