@@ -162,18 +162,19 @@ function openPopup() {}
 console.log(popup)
 
 // Function to open the modal
+let popup = document.getElementById("popup");
+function openPopup() {};
+
 function openModal() {
   document.getElementById("myModal").style.display = "flex";
-}
-
+};
 // Function to close the modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
-}
-
+};
 // Close the modal if the overlay is clicked
 window.onclick = function (event) {
   if (event.target === document.getElementById("myModal")) {
     closeModal();
-  }
+  };
 };
