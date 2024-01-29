@@ -136,7 +136,7 @@ input:checked + .sliderLangue:before {
 /* Menu Burger */
 .menuBurger{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 0px;
     left: 0px;
     width: 32px;
@@ -144,7 +144,7 @@ input:checked + .sliderLangue:before {
 }
 .menu-cb,
 .menu-label{
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
     appearance: none;
     width: 32px;
@@ -162,7 +162,7 @@ input:checked + .sliderLangue:before {
     flex-direction: row;
     justify-content: space-around;
     transform: translateX(-47%) translateY(50px);
-    z-index: 2;
+    z-index: 1;
     transition: transform 1s linear;
 }
 .menu-item{
@@ -467,4 +467,134 @@ h2 {
 }
 .blur-effect:not(iframe) {
     filter: blur(8px);
+}
+
+/* CSS du Formulaire modal */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Styling for the modal */
+.modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20%;
+    position: sticky;
+}
+
+  /* Close button style */
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.form-mb-5 {
+margin-bottom: 20px;
+}
+.form-pt-3 {
+padding-top: 12px;
+}
+.form-main-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 48px;
+}
+.form-wrapper {
+margin: 0 auto;
+max-width: 550px;
+width: 100%;
+}
+.form-label {
+display: block;
+font-weight: 500;
+font-size: 16px;
+color: hsl(192, 100%, 9%);
+margin-bottom: 12px;
+}
+.form-label-2 {
+font-weight: 600;
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.form-input {
+width: 100%;
+padding: 12px 24px;
+border-radius: 6px;
+border: 1px solid #e0e0e0;
+background: white;
+font-weight: 500;
+font-size: 16px;
+color: #6b7280;
+outline: none;
+resize: none;
+}
+.form-input:focus {
+border-color: hsl(322, 100%, 66%);
+box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-btn {
+text-align: center;
+font-size: 16px;
+border-radius: 6px;
+padding: 14px 32px;
+border: none;
+font-weight: 600;
+background-color: hsl(322, 100%, 66%);
+box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+color: white;
+width: 100%;
+cursor: pointer;
+width: 250px;
+}
+.form-btn:hover {
+box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form--mx-3 {
+margin-left: -12px;
+margin-right: -12px;
+}
+.form-px-3 {
+padding-left: 12px;
+padding-right: 12px;
+}
+.flex {
+display: flex;
+}
+.flex-wrap {
+flex-wrap: wrap;
+}
+.w-full {
+width: 100%;
+}
+.form-navBar {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 90%;
+padding: 35px 5%;
+}
+
+.form-checkbox {
+margin-bottom: 30px;
+
+}
+.FreeTrial {
+align-items: center;
+
+text-align: center;
 }

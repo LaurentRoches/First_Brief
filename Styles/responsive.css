@@ -43,6 +43,7 @@
     .menu-nav{
         transform: translateX(-100px) translateY(-9px);
         left: 45%;
+        visibility: visible;
     }
     .logo {
         width: 15%;

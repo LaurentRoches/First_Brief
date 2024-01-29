@@ -159,20 +159,20 @@ function dplct(){
 }
 
 
-// Ouvrir le formulaire
-let windowFeatures = "left=100,top=100,width=375,height=500";
-let goToForms = document.querySelector('.goToForms');
-goToForms.addEventListener('click', ouvrirFormulaire);
-let goToForms2 = document.querySelector('.goToForms2');
-goToForms2.addEventListener('click', ouvrirFormulaire);
-let popupFormulaire = document.getElementById('popupFormulaire');
+// Function to open the modal
+let popup = document.getElementById("popup");
+function openPopup() {};
 
-// function ouvrirFormulaire (){
-//   window.open(href="./html/Formulaire.html", "Formulaire", "windowFeatures");
-// }
-
-function ouvrirFormulaire (){
-  popupFormulaire.classList.replace("formsInvisible", "formsVisible");
-  document.body.classList.add("blur-effect:not(iframe)");
-
-}
+function openModal() {
+  document.getElementById("myModal").style.display = "flex";
+};
+// Function to close the modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+};
+// Close the modal if the overlay is clicked
+window.onclick = function (event) {
+  if (event.target === document.getElementById("myModal")) {
+    closeModal();
+  };
+};
